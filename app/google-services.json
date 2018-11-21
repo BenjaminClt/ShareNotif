@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "988023500101",
+    "firebase_url": "https://sharenotif.firebaseio.com",
+    "project_id": "sharenotif",
+    "storage_bucket": "sharenotif.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:988023500101:android:27c0b44241ddac05",
+        "android_client_info": {
+          "package_name": "bcleton.com.sharenotif"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "988023500101-o60hqilavgvpd4oncn8svr6j8n1fema6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAiaMwt1SJ0TeKd26Yk896s-O9f7XHWSgo"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

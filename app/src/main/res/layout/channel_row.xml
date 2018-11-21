@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <variable
+            name="channel"
+            type="bcleton.com.sharenotif.model.Channel"/>
+    </data>
+
+    <LinearLayout
+        android:minHeight="80dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:gravity="center"
+            android:layout_weight="0.4"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="0dp">
+
+            <TextView
+                android:layout_weight="0.8"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@{channel.title}"
+                android:textStyle="bold"
+                android:textSize="16dp"
+                android:paddingLeft="12dp" />
+
+            <TextView
+                android:layout_weight="0.2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@{channel.lastestMessage != null ? channel.lastestMessage.dateString : null}"
+                android:textSize="16dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:gravity="center"
+            android:layout_weight="0.6"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="0dp">
+
+            <TextView
+                android:layout_weight="0.8"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@{channel.lastestMessage != null ? channel.lastestMessage.text : null}"
+                android:textSize="14dp"
+                android:paddingLeft="25dp" />
+
+            <TextView
+                android:layout_weight="0.2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@{Integer.toString(channel.unreadedMessages)}"
+                android:textSize="16dp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</layout>
