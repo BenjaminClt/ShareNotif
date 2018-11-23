@@ -52,10 +52,8 @@ public class Channel extends BaseObservable {
 
     public void addMessage(Message m) {
         messages.add(m);
-        setUnreadedMessages(unreadedMessages + 1);
         notifyPropertyChanged(BR.messages);
         notifyPropertyChanged(BR.lastestMessage);
-
     }
 
     public void setUnreadedMessages(int count) {

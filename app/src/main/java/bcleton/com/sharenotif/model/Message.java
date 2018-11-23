@@ -5,6 +5,8 @@ import android.icu.util.TimeZone;
 import java.util.Calendar;
 import java.util.Date;
 
+import bcleton.com.sharenotif.Utils;
+
 public class Message implements Comparable<Message>{
     private Date date;
     private String text;
@@ -21,8 +23,7 @@ public class Message implements Comparable<Message>{
     }
 
     public String getDateString() {
-        Calendar now = Calendar.getInstance();
-        now.setTimeZone(java.util.TimeZone.getTimeZone("Europe/Paris"));
+        Calendar now = Utils.getDateNow();
 
         if (calendar.get(Calendar.DAY_OF_MONTH) + 1 == now.get(Calendar.DAY_OF_MONTH)) {
             return "hier.";

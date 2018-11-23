@@ -2,6 +2,7 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android">
 
     <data>
+        <import type="android.view.View"/>
         <variable
             name="channel"
             type="bcleton.com.sharenotif.model.Channel"/>
@@ -55,11 +56,16 @@
                 android:paddingLeft="25dp" />
 
             <TextView
-                android:layout_weight="0.2"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:background="@drawable/circle"
+                android:textColor="@android:color/white"
+                android:layout_height="25dp"
+                android:layout_width="25dp"
+                android:textAlignment="center"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="5dp"
+                android:visibility="@{channel.unreadedMessages == 0 ? View.GONE : View.VISIBLE}"
                 android:text="@{Integer.toString(channel.unreadedMessages)}"
-                android:textSize="16dp" />
+                android:textSize="16sp" />
 
         </LinearLayout>
 
